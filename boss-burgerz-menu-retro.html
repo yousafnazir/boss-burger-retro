@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Menu — Boss Burgerz | Arlington, TX</title>
+  <meta name="description" content="Boss Burgerz menu: burgers, chicken, sides, add-ons and drinks. Every burger comes with fries and a drink.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="boss-burgerz-retro.css">
+</head>
+<body class="menu-page">
+  <a class="skip" href="#main">Skip to content</a>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Burgers</span><span>Fries</span><span>Shakes</span><span>Fresh Daily</span><span>Made To Order</span><span>Never Frozen</span><span>Arlington, Texas</span>
+      <span>Burgers</span><span>Fries</span><span>Shakes</span><span>Fresh Daily</span><span>Made To Order</span><span>Never Frozen</span><span>Arlington, Texas</span>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="wrap header-inner">
+      <a class="logo" href="boss-burgerz-retro.html">
+        <img src="boss-burgerz-logo-white-bg.png" width="64" height="64" alt="Boss Burgerz">
+        <span class="logo-text">Boss Burgerz<span>Arlington, Texas</span></span>
+      </a>
+      <nav class="nav" id="nav" aria-label="Primary">
+        <a href="boss-burgerz-retro.html">Home</a>
+        <a class="is-active" href="boss-burgerz-menu-retro.html">Menu</a>
+        <a href="boss-burgerz-retro.html#story">Our Story</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button class="stamp-btn icon-btn" id="cartBtn" aria-label="Cart">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M3 4h2l2.2 11h11.3l1.8-7H7"/></svg>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <a class="btn btn-cream" href="https://maps.google.com/?q=1905+E+Arkansas+Ln+Arlington+TX">Find us</a>
+        <a class="btn btn-red" href="#burgers">Order online</a>
+        <button class="stamp-btn icon-btn menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="menu-intro">
+      <div class="wrap">
+        <p class="stamp stamp-cream">The board</p>
+        <h1>Menu</h1>
+        <p>Handcrafted burgers, chicken, sides, and fountain drinks. Every burger comes with fries and a drink.</p>
+      </div>
+    </section>
+
+    <div class="wrap menu-toolbar">
+      <label class="search">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4 4"/></svg>
+        <input type="search" id="menuSearch" placeholder="Search the menu…" autocomplete="off">
+      </label>
+      <div class="mode-row">
+        <button type="button" class="mode-btn is-on" data-mode="drive">Drive-thru</button>
+        <button type="button" class="mode-btn" data-mode="walk">Walk-up</button>
+        <span class="ready-pill">Ready in ~12 min</span>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <div class="filters">
+        <button type="button" class="chip is-on" data-filter="all">All</button>
+        <button type="button" class="chip" data-filter="under12">Under $12</button>
+        <button type="button" class="chip" data-filter="spicy">Spicy</button>
+        <button type="button" class="chip" data-filter="saved">Saved</button>
+      </div>
+      <p class="menu-note">All burgers include <b>fries + a drink</b></p>
+    </div>
+    <p class="empty-filter wrap" id="emptyFilter" hidden>Nothing matches. Try All, or search “smash”.</p>
+
+    <div class="wrap">
+      <div class="menu-paper">
+        <div class="folder-tabs-bar">
+          <div class="folder-tabs" role="tablist" aria-label="Menu categories">
+            <button type="button" class="folder-tab is-on" role="tab" id="tab-burgers" data-tab="burgers" aria-controls="pane-burgers" aria-selected="true">Burgers</button>
+            <button type="button" class="folder-tab" role="tab" id="tab-chicken" data-tab="chicken" aria-controls="pane-chicken" aria-selected="false" tabindex="-1">Chicken &amp; more</button>
+            <button type="button" class="folder-tab" role="tab" id="tab-sides" data-tab="sides" aria-controls="pane-sides" aria-selected="false" tabindex="-1">Sides</button>
+            <button type="button" class="folder-tab" role="tab" id="tab-addons" data-tab="addons" aria-controls="pane-addons" aria-selected="false" tabindex="-1">Add-ons</button>
+            <button type="button" class="folder-tab" role="tab" id="tab-drinks" data-tab="drinks" aria-controls="pane-drinks" aria-selected="false" tabindex="-1">Drinks</button>
+          </div>
+        </div>
+
+        <div class="folder-panel" data-edge="start">
+          <div class="tab-pane is-on" role="tabpanel" id="pane-burgers" data-pane="burgers" aria-labelledby="tab-burgers">
+            <section class="menu-section" id="featured">
+              <h2>New &amp; favorites</h2>
+              <div class="featured">
+                <article class="menu-card" data-name="okc smashburger double patty cheddar">
+                  <span class="badge">Guest favorite</span>
+                  <div class="menu-media">
+                    <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&w=1100&q=80" alt="OKC Smashburger">
+                  </div>
+                  <div class="menu-card-body">
+                    <h3>OKC Smashburger</h3>
+                    <p>Double patty smashed thin for extra sear, topped with cheddar. The one people drive across Arlington for.</p>
+                    <div class="menu-card-foot">
+                      <span class="price">$15.99</span>
+                      <button class="fav" aria-label="Save"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-9-9.2C1.8 7.2 4.2 5 7 5c1.8 0 3.2 1 4 2.4C11.8 6 13.2 5 15 5c2.8 0 5.2 2.2 4 5.8C19 15.6 12 20 12 20z"/></svg></button>
+                    </div>
+                    <button class="btn btn-red btn-full add" data-item="OKC Smashburger">Add to order</button>
+                  </div>
+                </article>
+                <article class="menu-card" data-name="bacon mac cheeseburger">
+                  <span class="badge deal">On this week</span>
+                  <div class="menu-media">
+                    <img src="https://images.unsplash.com/photo-1553979459-d2229ba7433b?auto=format&w=900&q=80" alt="Bacon Mac &amp; Cheeseburger">
+                  </div>
+                  <div class="menu-card-body">
+                    <h3>Bacon Mac &amp; Cheeseburger</h3>
+                    <p>Creamy mac ’n’ cheese and crispy bacon piled on a fresh-ground beef patty.</p>
+                    <div class="menu-card-foot">
+                      <span class="price">$13.99</span>
+                      <button class="fav" aria-label="Save"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-9-9.2C1.8 7.2 4.2 5 7 5c1.8 0 3.2 1 4 2.4C11.8 6 13.2 5 15 5c2.8 0 5.2 2.2 4 5.8C19 15.6 12 20 12 20z"/></svg></button>
+                    </div>
+                    <button class="btn btn-red btn-full add" data-item="Bacon Mac &amp; Cheeseburger">Add to order</button>
+                  </div>
+                </article>
+              </div>
+            </section>
+
+            <section class="menu-section" id="burgers">
+              <h2>Burgers</h2>
+              <div class="menu-grid">
+                <article class="menu-card" data-name="classic burger american cheese">
+                  <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&w=800&q=80" alt="Classic Burger">
+                  <div class="menu-card-body">
+                    <h3>Classic Burger</h3>
+                    <p>Fresh-ground beef, American cheese, lettuce, tomato &amp; house sauce.</p>
+                    <div class="menu-card-foot">
+                      <span class="price">$11.99</span>
+                      <button class="fav" aria-label="Save"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-9-9.2C1.8 7.2 4.2 5 7 5c1.8 0 3.2 1 4 2.4C11.8 6 13.2 5 15 5c2.8 0 5.2 2.2 4 5.8C19 15.6 12 20 12 20z"/></svg></button>
+                    </div>
+                    <button class="btn btn-red btn-full add" data-item="Classic Burger">Add to order</button>
+                  </div>
+                </article>
+                <article class="menu-card" data-name="argentinian burger chimichurri swiss">
+                  <img src="https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?auto=format&w=800&q=80" alt="Argentinian Burger">
+                  <div class="menu-card-body">
+                    <h3>Argentinian Burger</h3>
+                    <p>Pickled red onion, chimichurri, Swiss cheese.</p>
+                    <div class="menu-card-foot">
+                      <span class="price">$13.99</span>
+                      <button class="fav" aria-label="Save"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-9-9.2C1.8 7.2 4.2 5 7 5c1.8 0 3.2 1 4 2.4C11.8 6 13.2 5 15 5c2.8 0 5.2 2.2 4 5.8C19 15.6 12 20 12 20z"/></svg></button>
+                    </div>
+                    <button class="btn btn-red btn-full add" data-item="Argentinian Burger">Add to order</button>
+                  </div>
+                </article>
+                <article class="menu-card" data-name="roasted jalapeno burger pepper jack">
+                  <span class="badge">Spicy</span>
+                  <img src="https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?auto=format&w=800&q=80" alt="Roasted Jalapeño Burger">
+                  <div class="menu-card-body">
+                    <h3>Roasted Jalapeño Burger</h3>
+                    <p>Pepper Jack cheese and grilled jalapeños.</p>
+                    <div class="menu-card-foot">
+                      <span class="price">$12.99</span>
+                      <button class="fav" aria-label="Save"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-9-9.2C1.8 7.2 4.2 5 7 5c1.8 0 3.2 1 4 2.4C11.8 6 13.2 5 15 5c2.8 0 5.2 2.2 4 5.8C19 15.6 12 20 12 20z"/></svg></button>
+                    </div>
+                    <button class="btn btn-red btn-full add" data-item="Roasted Jalapeño Burger">Add to order</button>
+                  </div>
+                </article>
+                <article class="menu-card" data-name="hawaiian burger pineapple ham teriyaki">
+                  <img src="https://images.unsplash.com/photo-1551782450-17144efb9c50?auto=format&w=800&q=80" alt="Hawaiian Burger">
+                  <div class="menu-card-body">
+                    <h3>Hawaiian Burger</h3>
+                    <p>Grilled pineapple, ham, teriyaki sauce.</p>
+                    <div class="menu-card-foot">
+                      <span class="price">$13.50</span>
+                      <button class="fav" aria-label="Save"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-9-9.2C1.8 7.2 4.2 5 7 5c1.8 0 3.2 1 4 2.4C11.8 6 13.2 5 15 5c2.8 0 5.2 2.2 4 5.8C19 15.6 12 20 12 20z"/></svg></button>
+                    </div>
+                    <button class="btn btn-red btn-full add" data-item="Hawaiian Burger">Add to order</button>
+                  </div>
+                </article>
+                <article class="menu-card" data-name="mushroom swiss burger onions bacon">
+                  <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?auto=format&w=800&q=80" alt="Mushroom &amp; Swiss Burger">
+                  <div class="menu-card-body">
+                    <h3>Mushroom &amp; Swiss Burger</h3>
+                    <p>Grilled onions, mushrooms &amp; melted Swiss. Bacon on the build.</p>
+                    <div class="menu-card-foot">
+                      <span class="price">$13.99</span>
+                      <button class="fav" aria-label="Save"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-9-9.2C1.8 7.2 4.2 5 7 5c1.8 0 3.2 1 4 2.4C11.8 6 13.2 5 15 5c2.8 0 5.2 2.2 4 5.8C19 15.6 12 20 12 20z"/></svg></button>
+                    </div>
+                    <button class="btn btn-red btn-full add" data-item="Mushroom &amp; Swiss Burger">Add to order</button>
+                  </div>
+                </article>
+                <article class="menu-card" data-name="bacon mac cheeseburger">
+                  <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&w=800&q=80" alt="Bacon Mac &amp; Cheeseburger">
+                  <div class="menu-card-body">
+                    <h3>Bacon Mac &amp; Cheeseburger</h3>
+                    <p>Topped with bacon and mac &amp; cheese.</p>
+                    <div class="menu-card-foot">
+                      <span class="price">$13.99</span>
+                      <button class="fav" aria-label="Save"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-9-9.2C1.8 7.2 4.2 5 7 5c1.8 0 3.2 1 4 2.4C11.8 6 13.2 5 15 5c2.8 0 5.2 2.2 4 5.8C19 15.6 12 20 12 20z"/></svg></button>
+                    </div>
+                    <button class="btn btn-red btn-full add" data-item="Bacon Mac &amp; Cheeseburger">Add to order</button>
+                  </div>
+                </article>
+              </div>
+            </section>
+
+            <div class="menu-promo">
+              <p class="kicker">Combo included</p>
+              <h2>Fries and a drink with every burger.</h2>
+              <p>No upsell at the window. Order a burger, get the full meal — the Boss way.</p>
+            </div>
+          </div>
+
+          <div class="tab-pane" role="tabpanel" id="pane-chicken" data-pane="chicken" aria-labelledby="tab-chicken" hidden>
+            <section class="menu-section" id="chicken">
+              <h2>Chicken &amp; more</h2>
+              <div class="menu-grid">
+                <article class="menu-card" data-name="fried chicken sandwich original spicy">
+                  <span class="badge">Original or spicy</span>
+                  <img src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&w=800&q=80" alt="Fried Chicken Sandwich">
+                  <div class="menu-card-body">
+                    <h3>Fried Chicken Sandwich</h3>
+                    <p>Buttermilk-brined &amp; double-fried — original or spicy.</p>
+                    <div class="menu-card-foot">
+                      <span class="price">$10.99</span>
+                      <button class="fav" aria-label="Save"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-9-9.2C1.8 7.2 4.2 5 7 5c1.8 0 3.2 1 4 2.4C11.8 6 13.2 5 15 5c2.8 0 5.2 2.2 4 5.8C19 15.6 12 20 12 20z"/></svg></button>
+                    </div>
+                    <button class="btn btn-red btn-full add" data-item="Fried Chicken Sandwich">Add to order</button>
+                  </div>
+                </article>
+                <article class="menu-card" data-name="grilled chicken club bacon avocado">
+                  <img src="https://images.unsplash.com/photo-1550507992-eb63ffee0847?auto=format&w=800&q=80" alt="Grilled Chicken Club">
+                  <div class="menu-card-body">
+                    <h3>Grilled Chicken Club</h3>
+                    <p>Bacon, lettuce, avocado, roasted tomatoes on toasted sourdough.</p>
+                    <div class="menu-card-foot">
+                      <span class="price">$13.99</span>
+                      <button class="fav" aria-label="Save"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-9-9.2C1.8 7.2 4.2 5 7 5c1.8 0 3.2 1 4 2.4C11.8 6 13.2 5 15 5c2.8 0 5.2 2.2 4 5.8C19 15.6 12 20 12 20z"/></svg></button>
+                    </div>
+                    <button class="btn btn-red btn-full add" data-item="Grilled Chicken Club">Add to order</button>
+                  </div>
+                </article>
+                <article class="menu-card" data-name="chicken tender basket">
+                  <img src="https://images.unsplash.com/photo-1562967914-608f82629710?auto=format&w=800&q=80" alt="Chicken Tender Basket">
+                  <div class="menu-card-body">
+                    <h3>Chicken Tender Basket</h3>
+                    <p>Crispy tenders, ready for dipping.</p>
+                    <div class="menu-card-foot">
+                      <span class="price">$9.99</span>
+                      <button class="fav" aria-label="Save"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-9-9.2C1.8 7.2 4.2 5 7 5c1.8 0 3.2 1 4 2.4C11.8 6 13.2 5 15 5c2.8 0 5.2 2.2 4 5.8C19 15.6 12 20 12 20z"/></svg></button>
+                    </div>
+                    <button class="btn btn-red btn-full add" data-item="Chicken Tender Basket">Add to order</button>
+                  </div>
+                </article>
+                <article class="menu-card" data-name="chopped cheese sandwich">
+                  <span class="badge deal">Value</span>
+                  <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&w=800&q=80" alt="Chopped Cheese Sandwich">
+                  <div class="menu-card-body">
+                    <h3>Chopped Cheese Sandwich</h3>
+                    <p>Ground beef, cheese, lettuce, tomato and mayo.</p>
+                    <div class="menu-card-foot">
+                      <span class="price">$6.50</span>
+                      <button class="fav" aria-label="Save"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-9-9.2C1.8 7.2 4.2 5 7 5c1.8 0 3.2 1 4 2.4C11.8 6 13.2 5 15 5c2.8 0 5.2 2.2 4 5.8C19 15.6 12 20 12 20z"/></svg></button>
+                    </div>
+                    <button class="btn btn-red btn-full add" data-item="Chopped Cheese Sandwich">Add to order</button>
+                  </div>
+                </article>
+                <article class="menu-card" data-name="grilled cheese sandwich">
+                  <img src="https://images.unsplash.com/photo-1475090169767-40ed8d18f67d?auto=format&w=800&q=80" alt="Grilled Cheese">
+                  <div class="menu-card-body">
+                    <h3>Grilled Cheese Sandwich</h3>
+                    <p>Simple, toasted, melted.</p>
+                    <div class="menu-card-foot">
+                      <span class="price">$5.00</span>
+                      <button class="fav" aria-label="Save"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-9-9.2C1.8 7.2 4.2 5 7 5c1.8 0 3.2 1 4 2.4C11.8 6 13.2 5 15 5c2.8 0 5.2 2.2 4 5.8C19 15.6 12 20 12 20z"/></svg></button>
+                    </div>
+                    <button class="btn btn-red btn-full add" data-item="Grilled Cheese Sandwich">Add to order</button>
+                  </div>
+                </article>
+                <article class="menu-card" data-name="hot dog chili cheese dog">
+                  <img src="https://images.unsplash.com/photo-1619740455993-9e612b1af08a?auto=format&w=800&q=80" alt="Hot Dog">
+                  <div class="menu-card-body">
+                    <h3>Hot Dog / Chili Cheese Dog</h3>
+                    <p>Classic dog $5.00 · Chili cheese $6.50.</p>
+                    <div class="menu-card-foot">
+                      <span class="price">from $5.00</span>
+                      <button class="fav" aria-label="Save"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-9-9.2C1.8 7.2 4.2 5 7 5c1.8 0 3.2 1 4 2.4C11.8 6 13.2 5 15 5c2.8 0 5.2 2.2 4 5.8C19 15.6 12 20 12 20z"/></svg></button>
+                    </div>
+                    <button class="btn btn-red btn-full add" data-item="Hot Dog">Add to order</button>
+                  </div>
+                </article>
+              </div>
+            </section>
+          </div>
+
+          <div class="tab-pane" role="tabpanel" id="pane-sides" data-pane="sides" aria-labelledby="tab-sides" hidden>
+            <section class="menu-section" id="sides">
+              <h2>Sides</h2>
+              <div class="menu-grid">
+                <article class="menu-card" data-name="french fries waffle fries">
+                  <img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&w=800&q=80" alt="French Fries">
+                  <div class="menu-card-body">
+                    <h3>French Fries</h3>
+                    <p>Crisp, well-seasoned. Included with every burger.</p>
+                    <div class="menu-card-foot">
+                      <span class="price">$2.50</span>
+                      <button class="fav" aria-label="Save"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-9-9.2C1.8 7.2 4.2 5 7 5c1.8 0 3.2 1 4 2.4C11.8 6 13.2 5 15 5c2.8 0 5.2 2.2 4 5.8C19 15.6 12 20 12 20z"/></svg></button>
+                    </div>
+                    <button class="btn btn-red btn-full add" data-item="French Fries">Add to order</button>
+                  </div>
+                </article>
+                <article class="menu-card" data-name="chili cheese fries">
+                  <img src="https://images.unsplash.com/photo-1576107232684-1279f390859f?auto=format&w=800&q=80" alt="Chili Cheese Fries">
+                  <div class="menu-card-body">
+                    <h3>Chili Cheese Fries</h3>
+                    <p>Fries loaded with chili and cheese sauce.</p>
+                    <div class="menu-card-foot">
+                      <span class="price">$3.99</span>
+                      <button class="fav" aria-label="Save"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-9-9.2C1.8 7.2 4.2 5 7 5c1.8 0 3.2 1 4 2.4C11.8 6 13.2 5 15 5c2.8 0 5.2 2.2 4 5.8C19 15.6 12 20 12 20z"/></svg></button>
+                    </div>
+                    <button class="btn btn-red btn-full add" data-item="Chili Cheese Fries">Add to order</button>
+                  </div>
+                </article>
+                <article class="menu-card" data-name="onion strings blooming onion">
+                  <img src="https://images.unsplash.com/photo-1639024471283-03518883512d?auto=format&w=800&q=80" alt="Onion Strings">
+                  <div class="menu-card-body">
+                    <h3>Onion Strings / Blooming Onion</h3>
+                    <p>Strings $2.99 · Blooming onion $4.99.</p>
+                    <div class="menu-card-foot">
+                      <span class="price">from $2.99</span>
+                      <button class="fav" aria-label="Save"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-9-9.2C1.8 7.2 4.2 5 7 5c1.8 0 3.2 1 4 2.4C11.8 6 13.2 5 15 5c2.8 0 5.2 2.2 4 5.8C19 15.6 12 20 12 20z"/></svg></button>
+                    </div>
+                    <button class="btn btn-red btn-full add" data-item="Onion Strings">Add to order</button>
+                  </div>
+                </article>
+                <article class="menu-card" data-name="mac and cheese">
+                  <img src="https://images.unsplash.com/photo-1543339494-b4cd4f7ba686?auto=format&w=800&q=80" alt="Mac &amp; Cheese">
+                  <div class="menu-card-body">
+                    <h3>Mac &amp; Cheese</h3>
+                    <p>Creamy side of house mac.</p>
+                    <div class="menu-card-foot">
+                      <span class="price">$3.99</span>
+                      <button class="fav" aria-label="Save"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-9-9.2C1.8 7.2 4.2 5 7 5c1.8 0 3.2 1 4 2.4C11.8 6 13.2 5 15 5c2.8 0 5.2 2.2 4 5.8C19 15.6 12 20 12 20z"/></svg></button>
+                    </div>
+                    <button class="btn btn-red btn-full add" data-item="Mac &amp; Cheese">Add to order</button>
+                  </div>
+                </article>
+                <article class="menu-card" data-name="fried jalapenos">
+                  <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&w=800&q=80" alt="Fried Jalapeños">
+                  <div class="menu-card-body">
+                    <h3>Fried Jalapeños</h3>
+                    <p>Crispy heat on the side.</p>
+                    <div class="menu-card-foot">
+                      <span class="price">$2.99</span>
+                      <button class="fav" aria-label="Save"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-9-9.2C1.8 7.2 4.2 5 7 5c1.8 0 3.2 1 4 2.4C11.8 6 13.2 5 15 5c2.8 0 5.2 2.2 4 5.8C19 15.6 12 20 12 20z"/></svg></button>
+                    </div>
+                    <button class="btn btn-red btn-full add" data-item="Fried Jalapeños">Add to order</button>
+                  </div>
+                </article>
+                <article class="menu-card" data-name="fried pickles">
+                  <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?auto=format&w=800&q=80" alt="Fried Pickles">
+                  <div class="menu-card-body">
+                    <h3>Fried Pickles</h3>
+                    <p>Golden, tangy, shareable.</p>
+                    <div class="menu-card-foot">
+                      <span class="price">$2.99</span>
+                      <button class="fav" aria-label="Save"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-9-9.2C1.8 7.2 4.2 5 7 5c1.8 0 3.2 1 4 2.4C11.8 6 13.2 5 15 5c2.8 0 5.2 2.2 4 5.8C19 15.6 12 20 12 20z"/></svg></button>
+                    </div>
+                    <button class="btn btn-red btn-full add" data-item="Fried Pickles">Add to order</button>
+                  </div>
+                </article>
+              </div>
+            </section>
+          </div>
+
+          <div class="tab-pane" role="tabpanel" id="pane-addons" data-pane="addons" aria-labelledby="tab-addons" hidden>
+            <section class="menu-section" id="addons">
+              <h2>Add-ons</h2>
+              <div class="menu-grid">
+                <article class="menu-card" data-name="bacon">
+                  <img src="https://images.unsplash.com/photo-1528607929212-2636ec44253e?auto=format&w=800&q=80" alt="Bacon">
+                  <div class="menu-card-body">
+                    <h3>Bacon</h3>
+                    <p>Crispy extra on any burger or sandwich.</p>
+                    <div class="menu-card-foot"><span class="price">$0.75</span></div>
+                    <button class="btn btn-red btn-full add" data-item="Bacon">Add to order</button>
+                  </div>
+                </article>
+                <article class="menu-card" data-name="avocado">
+                  <img src="https://images.unsplash.com/photo-1601039641847-7857b994d704?auto=format&w=800&q=80" alt="Avocado">
+                  <div class="menu-card-body">
+                    <h3>Avocado</h3>
+                    <p>Fresh slices, extra on the Club or any burger.</p>
+                    <div class="menu-card-foot"><span class="price">$1.25</span></div>
+                    <button class="btn btn-red btn-full add" data-item="Avocado">Add to order</button>
+                  </div>
+                </article>
+                <article class="menu-card" data-name="chimichurri cheese sauce mushrooms">
+                  <img src="https://images.unsplash.com/photo-1472476443507-c7a5948772fc?auto=format&w=800&q=80" alt="Sauces and toppings">
+                  <div class="menu-card-body">
+                    <h3>Chimichurri · Cheese sauce · Mushrooms</h3>
+                    <p>Each $1.00. Make it fancy.</p>
+                    <div class="menu-card-foot"><span class="price">$1.00</span></div>
+                    <button class="btn btn-red btn-full add" data-item="Chimichurri">Add to order</button>
+                  </div>
+                </article>
+              </div>
+            </section>
+          </div>
+
+          <div class="tab-pane" role="tabpanel" id="pane-drinks" data-pane="drinks" aria-labelledby="tab-drinks" hidden>
+            <section class="menu-section" id="drinks">
+              <h2>Drinks</h2>
+              <div class="menu-grid">
+                <article class="menu-card" data-name="fountain drink small">
+                  <img src="https://images.unsplash.com/photo-1629203851122-3726ecdf080e?auto=format&w=800&q=80" alt="Small fountain drink">
+                  <div class="menu-card-body">
+                    <h3>Small</h3>
+                    <p>Dr Pepper, RC, Orange, Sprite, Root Beer, Diet Dr Pepper, Strawberry Lemonade.</p>
+                    <div class="menu-card-foot"><span class="price">$1.50</span></div>
+                    <button class="btn btn-red btn-full add" data-item="Small drink">Add to order</button>
+                  </div>
+                </article>
+                <article class="menu-card" data-name="fountain drink medium">
+                  <img src="https://images.unsplash.com/photo-1527960471264-932f39eb5846?auto=format&w=800&q=80" alt="Medium fountain drink">
+                  <div class="menu-card-body">
+                    <h3>Medium</h3>
+                    <p>Included with every burger. Same fountain lineup.</p>
+                    <div class="menu-card-foot"><span class="price">$1.89</span></div>
+                    <button class="btn btn-red btn-full add" data-item="Medium drink">Add to order</button>
+                  </div>
+                </article>
+                <article class="menu-card" data-name="fountain drink large">
+                  <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&w=800&q=80" alt="Large fountain drink">
+                  <div class="menu-card-body">
+                    <h3>Large</h3>
+                    <p>Extra ice, extra fizz — still the same house sodas.</p>
+                    <div class="menu-card-foot"><span class="price">$2.25</span></div>
+                    <button class="btn btn-red btn-full add" data-item="Large drink">Add to order</button>
+                  </div>
+                </article>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="contact-bar" id="contact">
+    <div class="wrap">
+      <a href="https://maps.google.com/?q=1905+E+Arkansas+Ln+Arlington+TX">1905 E Arkansas Ln, Arlington, TX 76010</a>
+      <a href="tel:+16824072809">(682) 407-2809</a>
+      <span>Mon–Sat 11am–9pm · Sunday closed</span>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="wrap footer-grid">
+      <div>
+        <a class="logo" href="boss-burgerz-retro.html">
+          <img src="boss-burgerz-logo-white-bg.png" width="56" height="56" alt="">
+          <span class="logo-text">Boss Burgerz</span>
+        </a>
+        <p>Handcrafted burgers in Arlington, Texas. Bigger. Better. Boss.</p>
+      </div>
+      <div>
+        <h3>Visit</h3>
+        <a href="https://maps.google.com/?q=1905+E+Arkansas+Ln+Arlington+TX">Get directions</a>
+        <a href="tel:+16824072809">(682) 407-2809</a>
+        <p>Mon–Sat 11am–9pm</p>
+      </div>
+      <div>
+        <h3>Menu</h3>
+        <a href="boss-burgerz-retro.html">Home</a>
+        <a href="boss-burgerz-menu-retro.html">Menu</a>
+        <a href="boss-burgerz-retro.html#story">Our Story</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div>
+        <h3>Order</h3>
+        <a href="#burgers">Order online</a>
+        <a href="https://www.instagram.com/bossburgerz_/" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+    <p class="footer-mark" aria-hidden="true">Boss Burgerz</p>
+    <div class="wrap legal">
+      <span>© 2026 Boss Burgerz by Froggiez. All rights reserved.</span>
+      <span>Design preview — not the live site.</span>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status">Added to order</div>
+  <script src="boss-burgerz-retro.js"></script>
+</body>
+</html>
